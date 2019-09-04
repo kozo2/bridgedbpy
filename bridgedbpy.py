@@ -9,8 +9,8 @@ __license__ = 'MIT'
 API_BASE = 'https://webservice.bridgedb.org/'
 
 def hmdb2kegg(hmdb_id):
-    r = requests.get(API_BASE + 'Human/xrefs/Ch/' + hmdb_id + '?dataSource=Ck')
-    if r.status_code == 200:
-        return re.findall('C[0-9]{5}', r.content)
+    req = requests.get(API_BASE + 'Human/xrefs/Ch/' + hmdb_id + '?dataSource=Ck')
+    if req.status_code == 200:
+        return re.findall(r'C[0-9]{5}', req.content)
     else:
         print("Request failed for " + hmdb_id)
