@@ -11,6 +11,7 @@ API_BASE = 'https://webservice.bridgedb.org/'
 def hmdb2kegg(hmdb_id):
     req = requests.get(API_BASE + 'Human/xrefs/Ch/' + hmdb_id + '?dataSource=Ck')
     if req.status_code == 200:
-        return re.findall(rb'C[0-9]{5}', req.content)
+        cids = re.findall(rb'C[0-9]{5}', req.content)
+        return [cid.decode("utf-8") for cid in cids]
     else:
         print("Request failed for " + hmdb_id)
