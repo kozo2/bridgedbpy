@@ -1,2 +1,2 @@
 # bridgedbpy
-Code for using BridgeDb identifier mapping framework from within Python
+Python wrapper for the [BridgeDB](https://www.bridgedb.org/swagger/) webservices.
