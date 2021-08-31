@@ -8,4 +8,4 @@ def get_organism_code(name):
     elif not (df['generic_name'] + " " + df['specific_name'] == name).any():
         sys.exit("Unknown species:" + name)
     else:
-        return list(df[df['generic_name'] + df['specific_name'] == name]['symbol'])[0]
+        return list(df[df['generic_name'] + " " + df['specific_name'] == name]['symbol'])[0]
