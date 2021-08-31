@@ -6,4 +6,4 @@ def get_full_name(syscode):
     if not (df[1] == syscode).any():
         sys.exit("You must provide a system code")
     else:
-        return list(df[df[1] == syscode][0])[0]
+        return df[df[1] == syscode]
