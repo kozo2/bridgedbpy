@@ -1,8 +1,14 @@
+# -*- coding:utf-8 -*-
+
 import requests
 import re
 
+from .get_full_name import *
+from .get_organism_code import *
+from .get_system_code import *
+
 __author__ = 'Kozo Nishida'
-__email__ = 'knishida@riken.jp'
+__email__ = 'kozo.nishida@gmail.com'
 __version__ = '0.0.1'
 __license__ = 'MIT'
 
